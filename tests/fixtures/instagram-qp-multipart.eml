@@ -1,0 +1,22 @@
+Authentication-Results: mx.cloudflare.net; spf=pass smtp.mailfrom=mail.instagram.com; dkim=pass header.d=mail.instagram.com; dmarc=pass header.from=mail.instagram.com
+From: Instagram <security@mail.instagram.com>
+To: Visual Header <outra-caixa@inboxnexo.online>
+Subject: =?UTF-8?B?MDEyMzQ1IMOpIHNldSBjw7NkaWdvIGRvIEluc3RhZ3JhbQ==?=
+Date: Mon, 02 Nov 2026 10:00:00 +0000
+Message-ID: <sintetico-1@mail.instagram.com>
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="b1"
+
+--b1
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+Ol=C3=A1! Use o c=C3=B3digo 012345 para confirmar sua conta. N=C3=A3o compar=
+tilhe este c=C3=B3digo.
+
+--b1
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<p>Ol=C3=A1! Use o c=C3=B3digo <b>012345</b></p><img src=3D"https://track.example/p.gif">
+--b1--

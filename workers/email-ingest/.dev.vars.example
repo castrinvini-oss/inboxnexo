@@ -1,0 +1,3 @@
+# Copie para .dev.vars (ignorado pelo git) para `wrangler dev`.
+INGEST_ENDPOINT_URL=<INGEST_ENDPOINT_URL>
+INGEST_HMAC_SECRET=<INGEST_HMAC_SECRET>

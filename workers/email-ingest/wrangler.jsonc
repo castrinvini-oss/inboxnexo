@@ -1,0 +1,22 @@
+{
+  // Cloudflare Email Worker — recebimento do InboxNexo Pro.
+  // Segredos (NÃO versionar): defina com
+  //   npx wrangler secret put INGEST_HMAC_SECRET
+  //   npx wrangler secret put INGEST_ENDPOINT_URL
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "inboxnexo-email-ingest",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "observability": { "enabled": true },
+  "vars": {
+    "MAIL_DOMAIN": "inboxnexo.online",
+    "MAX_RAW_BYTES": "5242880",
+    "INGEST_TIMEOUT_MS": "15000",
+    // Vazio = nenhum Authentication-Results é confiável (selo nunca exibido).
+    // Preencha apenas após inspecionar mensagens reais (docs/DIAGNOSTICO.md).
+    "TRUSTED_AUTHSERV_IDS": "",
+    "RECOGNIZED_SENDER_DOMAINS": "instagram:Instagram:mail.instagram.com",
+    "DIAGNOSTIC_AUTH_HEADERS": "false"
+  }
+}

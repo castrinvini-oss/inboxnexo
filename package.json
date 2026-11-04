@@ -1,0 +1,28 @@
+{
+  "name": "inboxnexo-pro",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "workers/*"
+  ],
+  "engines": {
+    "node": ">=20.9"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc -p tsconfig.json --noEmit && npm run typecheck -w @inboxnexo/web && npm run typecheck -w @inboxnexo/email-worker",
+    "build": "npm run build -w @inboxnexo/web",
+    "sync:shared": "node scripts/sync-shared.mjs",
+    "check": "npm run sync:shared && npm run typecheck && npm test && npm run build"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.14",
+    "@types/node": "24.19.2",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}

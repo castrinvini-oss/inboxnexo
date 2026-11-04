@@ -1,0 +1,9 @@
+Authentication-Results: mx.cloudflare.net; dmarc=pass header.from=mail.instagram.com
+From: Instagram <security@mail.instagram.com>
+To: alguem@inboxnexo.online
+Subject: 123456 is your Instagram code
+Message-ID: <sintetico-4@spoof.example>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+123456 is your Instagram code.
